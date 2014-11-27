@@ -38,7 +38,7 @@ class Ball {
   }
 
   void bounceX() {
-    
+
     velocity.x = velocity.x * -1;
 
     if (location.x < 0) {
@@ -49,8 +49,14 @@ class Ball {
   }
 
   void bounceY() {
+    
     velocity.y *= -(1 - braking);
-    location.y = height - ballSize/2;
+
+    if (location.y < 0) {
+      location.y = 0;
+    } else if (location.y > height - ballSize/2) {
+      location.y = height - ballSize/2;
+    }
   }
 
   void draw() {
