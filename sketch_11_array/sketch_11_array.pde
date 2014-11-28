@@ -10,7 +10,7 @@ void setup() {
   
   for (int i = 0; i < numBalls; i++) {
    
-    Ball bouncy = new Ball(width/2, 60, random(2.5), random(5));
+    Ball bouncy = new Ball(width/2, 60, random(5), random(5));
     ballArray[i] = bouncy;
   }
 }
