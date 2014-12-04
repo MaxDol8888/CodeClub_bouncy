@@ -32,6 +32,10 @@ class Ball {
     location.add(velocity);
     velocity.y += gravity;
   }
+  
+  float getYPosition() {
+    return location.y;
+  }
 
   boolean shouldBounceX() {
     return ((location.x > width) || (location.x < 0));
